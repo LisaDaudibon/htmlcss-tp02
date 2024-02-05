@@ -13,7 +13,7 @@ body{
     display: flex;
 }
 
-#aperture {
+#welcome-aperture {
     width: 2em;
     height: 2em;
     position: fixed;
@@ -22,9 +22,12 @@ body{
 }
 
 #welcome-text {
+    background-image:url('Vector1.jpg');
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 6vw;
     flex-direction: column;
     height: 100vh;
     width: 50vw;
@@ -34,12 +37,34 @@ body{
         font-weight: 700;
         width: 40vw;
         line-height: 2em;
+        margin-block-end: 0;
     }
 
     p {
         width: 40vw;
         line-height: 2em;
     }
+
+    button {
+        background-color: black;
+        color: white;
+        height: 3em;
+        padding: 0 1em 0 1em;
+        margin-top: 2em;
+        border-radius: 32px;
+    }
+}
+
+#welcome-link {
+    text-decoration: none;
+    position: fixed;
+    bottom: 5vh;
+    left: 35vw;
+    font-weight: 700;
+}
+
+#welcome-link:visited {
+    color: black;
 }
 
 
