@@ -1,15 +1,24 @@
-/* @font-face {
-    font-family: ;
-    src: url();
-} */
+@font-face {
+    font-family: MontSerra;
+    src: url(static/Montserrat-Medium.ttf);
+}
+
 body{
     margin: 0 ;
-    /* font-family: ; */
+    font-family: MontSerra;
 }
 
 /* Welcome page */
 #welcome {
     display: flex;
+}
+
+#aperture {
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    top: 3vh;
+    left: 2vw;
 }
 
 #welcome-text {
@@ -19,8 +28,22 @@ body{
     flex-direction: column;
     height: 100vh;
     width: 50vw;
+
+    h1 {
+        font-size: 3em;
+        font-weight: 700;
+        width: 40vw;
+        line-height: 2em;
+    }
+
+    p {
+        width: 40vw;
+        line-height: 2em;
+    }
 }
 
+
+/* Image */
 #man-image {
     width: 50vw;
     height: 100vh;
