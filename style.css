@@ -1,0 +1,32 @@
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+body{
+    margin: 0 ;
+    /* font-family: ; */
+}
+
+/* Welcome page */
+#welcome {
+    display: flex;
+}
+
+#welcome-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+}
+
+#man-image {
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+/* Article page */
