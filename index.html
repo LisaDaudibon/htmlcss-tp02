@@ -9,8 +9,6 @@
 
 <body>
     <section id="welcome">
-    
-        <img id="welcome-aperture" src="aperture.jpg" alt="">
         <section id="welcome-text">
             <p id="welcome-date">23 avril 2022</p>
             <h1>Lorem ipsum dolor sit amet consectetur</h1>
@@ -67,8 +65,21 @@
         </section>
     </div>
 
-    <section id="newsletter">
-
+    <section class="newsletter">
+        <h2>Restez informés</h2>
+        <p class="newsletter-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed vitae donec iaculis tincidunt nisi nam arcu porta. </p>
+        <form>
+            <label for="email" class="email"> Votre email</label>
+                <input type="text" id="email" name="email"/>
+            <label for="accept" class="accept-checkbox">
+                <input type="checkbox" id="accept" /> J'accepte de transmettre mes données
+            </label>
+            <button class="subscribe">Souscrire à la newsletter</button>
+        </form>    
     </section>
+
+    <footer>
+        <p>© Aperture 2022 - Mentions légales</p>
+    </footer>
 </body>
 </html>

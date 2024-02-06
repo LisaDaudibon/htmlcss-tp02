@@ -3,6 +3,11 @@
     src: url(static/Montserrat-Medium.ttf);
 }
 
+@font-face {
+    font-family: MontSerraLight;
+    src: url(/static/Montserrat-ExtraLight.ttf);
+}
+
 body{
     margin: 0 ;
     font-family: MontSerra;
@@ -17,6 +22,7 @@ button {
     margin-top: 2em;
     border-radius: 32px;
     cursor: pointer;
+    font-family: MontSerra;
 }
 
 button:hover {
@@ -32,20 +38,12 @@ button:hover {
 
 .link:visited,
 .link:hover {
-    color: rgba(107, 110, 110, 0.979);
+    color: black;
 }
 
 /* Welcome page */
 #welcome {
     display: flex;
-}
-
-#welcome-aperture {
-    width: 2em;
-    height: 2em;
-    position: fixed;
-    top: 3vh;
-    left: 2vw;
 }
 
 #welcome-text {
@@ -85,11 +83,6 @@ button:hover {
     }
 }
 
-#welcome-link:visited {
-    color: black;
-}
-
-
 /* Image */
 #man-image {
     width: 50vw;
@@ -102,88 +95,155 @@ button:hover {
 /* Articles sections */
 #main-page {
     height: 100vh;
+    padding-bottom: 2vh;
+
+    /* Navbar */
+    header {
+        position: sticky;
+        top: 0;
+        background: white;
+    }
+
+    nav {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #aperture {
+            display: flex;
+            margin-left: 2em;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #aperture-navbar {
+            width: 2em;
+            height: 2em;
+            margin-right: 2em;
+        }
+
+        #right-element {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-right-element:hover {
+            color: rgba(107, 110, 110, 0.979);
+        }
+
+        img {
+            width: 1em;
+            height: 1em;
+            margin-right: 2em ;
+            cursor: pointer;
+        }
+
+        p {
+            margin-right: 2em;
+            cursor: pointer;
+        }
+    }
+
+    /* Section principale */
+    #section-principale {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: 6fr 1fr;
+
+        #main-article {
+            width: 35vw;
+            grid-column-start: 2;
+            grid-row-start: 1;
+            padding-top: 15vh;
+        }
+
+        article {
+            padding-bottom: 3vh;
+        }
+
+        #about-me {
+            width: 25vw;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            padding-top: 15vh;
+        }
+
+        #main-link {
+            grid-column-start: 2;
+            grid-row-start: 2;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 
-/* Navbar */
-nav {
-    height: 8vh;
+/* Newsletter page */
+.newsletter {
+    height: 40vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0 ;
+    background-color: rgba(248, 248, 248, 1);
+    padding-bottom: 2vh;
 
-    #aperture {
+    .newsletter-p{
+        width: 40vw;
+        line-height: 2em;
+        text-align: center;
+    }
+
+    h2 {
+        padding-top: 2em;
+    }
+
+    form {
         display: flex;
-        margin-left: 2em;
+        flex-direction: column;
         align-items: center;
-    }
+        
+        input {
+        border-radius: 16px;
+        }
 
-    a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.5em;
-        font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-    }
+        #email {
+            height: 2em;
+            width: 20vw;
+            padding-left: 1em;
+        }
 
-    #aperture-navbar {
-        width: 2em;
-        height: 2em;
-        margin-right: 2em;
-    }
+        .email {
+            display: flex;
+            flex-direction: column;
+            width: 20vw; 
+            margin-bottom: 5px;          
+        }
 
-    #right-element {
-        display: flex;
-        align-items: center;
-    }
-    
-    .navbar-right-element:hover {
-        color: rgba(107, 110, 110, 0.979);
-    }
+        .accept-checkbox{
+            margin: 1em;
+        }
 
-    img {
-        width: 1em;
-        height: 1em;
-        margin-right: 2em ;
-        cursor: pointer;
-    }
-
-    p {
-        margin-right: 2em;
-        cursor: pointer;
+        .subscribe{
+            width:18vw;
+            margin-top: 0;
+        }
     }
 }
 
-/* Section principale */
-section {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    grid-template-rows: 6fr 1fr;
-
-    #main-article {
-        width: 35vw;
-        grid-column-start: 2;
-        grid-row-start: 1;
-        padding-top: 15vh;
-    }
-
-    article {
-        padding-bottom: 3vh;
-    }
-
-    #about-me {
-        width: 25vw;
-        grid-column-start: 3;
-        grid-row-start: 1;
-        padding-top: 15vh;
-    }
-
-    #main-link {
-        grid-column-start: 3;
-        grid-row-start: 2;
-        padding-top: 5vh;
-        padding-left: 5vw;
-    }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: MontSerraLight;
+    font-size: 0.75em;
+    height: 5vh;
+    background-color: rgba(41, 41, 41, 1);
+    color: white;
 }
-
